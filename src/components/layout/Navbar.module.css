@@ -2,6 +2,7 @@
   width: 100%;
   position: relative;
   z-index: 1000;
+  overflow: hidden;
 }
 
 /* --- Top Bar --- */
@@ -23,6 +24,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-dark-light);
+  overflow: hidden;
 }
 
 .topBarLeft, .topBarRight {
@@ -275,5 +277,42 @@
   }
   .topBarContainer {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .topBar {
+    height: 40px;
+  }
+  .topBarContainer {
+    font-size: 0.7rem;
+    gap: 8px;
+  }
+  .cartBtn {
+    font-size: 0.7rem;
+    gap: 6px;
+  }
+  .cartIconBadge {
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+  }
+  .logoWrapper {
+    margin-top: -20px;
+    padding: 8px 12px;
+    border-radius: 0 0 20px 20px;
+  }
+  .bearIcon {
+    font-size: 2rem;
+  }
+  .logoText {
+    font-size: 1.1rem;
+  }
+  .mobileMenu {
+    padding: 15px;
+  }
+  .mobileNavLink {
+    font-size: 1rem;
+    padding: 8px 0;
   }
 }

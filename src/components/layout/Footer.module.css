@@ -224,10 +224,50 @@
 @media (max-width: 768px) {
   .footerMain {
     flex-direction: column;
+    gap: 30px;
+  }
+  .col {
+    min-width: unset;
+  }
+  .colNewsletter {
+    min-width: unset;
+  }
+  .footer {
+    padding: 50px 0 30px;
+  }
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
   }
   .bottomLeft {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
+  }
+  .policyLinks {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .paymentMethods {
+    justify-content: center;
+  }
+  .footerWrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+  .colTitle {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .socialIcons {
+    justify-content: center;
+  }
+  .footerLogo {
+    justify-content: center;
   }
 }

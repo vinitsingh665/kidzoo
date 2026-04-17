@@ -12,7 +12,7 @@ const endpoint = `https://${domain}/api/2024-01/graphql.json`;
 async function shopifyFetch(query, variables = {}) {
   if (!domain || !token) {
     console.error("Missing Shopify Credentials!");
-    return { data: null };
+    return null;
   }
 
   const res = await fetch(endpoint, {
@@ -22,13 +22,14 @@ async function shopifyFetch(query, variables = {}) {
       "X-Shopify-Storefront-Access-Token": token,
     },
     body: JSON.stringify({ query, variables }),
-    cache: "no-store", // Used no-store to keep data always fresh during dev/testing
+    cache: "no-store",
   });
   
   const json = await res.json();
   if (json.errors) {
-    console.error("Shopify GraphQL Error:", json.errors);
-    throw new Error(json.errors[0].message);
+    console.error("Shopify GraphQL Error Details:", JSON.stringify(json.errors, null, 2));
+    // Don't throw — return null so fallback data is used
+    return null;
   }
   return json.data;
 }
@@ -56,8 +57,8 @@ function normalizeShopifyProduct(node) {
 
 export async function getProducts(filters = {}) {
   const query = `
-    query getProducts($query: String!) {
-      products(first: 50, query: $query) {
+    query {
+      products(first: 50) {
         edges {
           node {
             id
@@ -85,8 +86,7 @@ export async function getProducts(filters = {}) {
     }
   `;
   
-  let searchQuery = "status:active";
-  const data = await shopifyFetch(query, { query: searchQuery });
+  const data = await shopifyFetch(query);
   if (!data?.products?.edges) return [];
   
   let filtered = data.products.edges.map(e => normalizeShopifyProduct(e.node));
