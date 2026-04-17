@@ -1,0 +1,233 @@
+.footerWrapper {
+  position: relative;
+  margin-top: 100px;
+}
+
+.scallopedTop {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: radial-gradient(circle at 45px 30px, var(--color-dark) 46px, transparent 46px);
+  background-size: 90px 60px;
+  background-repeat: repeat-x;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.footer {
+  background: var(--color-dark);
+  color: white;
+  padding: 80px 0 40px;
+  font-family: var(--font-body);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.colNewsletter {
+  flex: 1.5;
+  min-width: 300px;
+}
+
+.colTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+.icon {
+  color: var(--color-orange);
+  font-size: 1.2rem;
+}
+
+.contactText {
+  line-height: 1.5;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.bearIcon {
+  font-size: 2.5rem;
+  color: var(--color-orange);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linksList li a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.linksList li a:hover {
+  color: var(--color-orange);
+}
+
+.newsletterForm {
+  display: flex;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 10px 0;
+}
+
+.newsletterForm input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.newsletterForm input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.newsletterForm button {
+  background: var(--color-orange);
+  color: white;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 20px;
+}
+
+.socialIcons a {
+  color: rgba(255,255,255,0.5);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: var(--font-heading);
+}
+
+.socialIcons a:hover {
+  color: white;
+}
+
+.footerBottomWrapper {
+  background: #25282B;
+  padding: 20px 0;
+  font-family: var(--font-body);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bottomLeft {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.bottomLeft p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.policyLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.policyLinks a {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.policyLinks a:hover {
+  color: white;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footerMain {
+    flex-direction: column;
+  }
+  .bottomLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,345 @@
+.contactPage {
+  padding: var(--space-2xl) 0 var(--space-4xl);
+}
+
+.heroSection {
+  text-align: center;
+  padding: var(--space-3xl) var(--space-lg);
+  background: linear-gradient(135deg, #E0F7F5 0%, #FFF3E0 100%);
+  margin-bottom: var(--space-3xl);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.heroSubtitle {
+  color: var(--color-dark-light);
+  font-size: 1.05rem;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+/* Form */
+.formSection {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-gray-light);
+}
+
+.formTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.formGroup {
+  margin-bottom: var(--space-lg);
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: var(--space-md);
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color var(--transition-fast);
+  background: var(--color-bg);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: var(--color-primary);
+  background: var(--color-white);
+}
+
+.formGroup textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-pill);
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-color);
+}
+
+/* Info */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.infoCard {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-gray-light);
+  transition: all var(--transition-base);
+}
+
+.infoCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.infoIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.infoTitle {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.infoText {
+  color: var(--color-dark-light);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.infoLink {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* FAQ */
+.faqSection {
+  max-width: 800px;
+  margin: var(--space-4xl) auto 0;
+  padding: 0 var(--space-lg);
+}
+
+.faqItem {
+  border: 1px solid var(--color-gray-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.faqQuestion {
+  width: 100%;
+  padding: var(--space-lg);
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--transition-fast);
+}
+
+.faqQuestion:hover {
+  background: var(--color-bg);
+}
+
+.faqArrow {
+  font-size: 1.2rem;
+  transition: transform var(--transition-base);
+}
+
+.faqArrow.open {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  padding: 0 var(--space-lg) var(--space-lg);
+  color: var(--color-dark-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.successMsg {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.successEmoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.successTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.successText {
+  color: var(--color-dark-light);
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 0 var(--space-md);
+    gap: var(--space-xl);
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .heroSection {
+    padding: var(--space-2xl) var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .infoSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .faqSection {
+    padding: 0 var(--space-md);
+    margin-top: var(--space-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .contactPage {
+    padding: var(--space-md) 0 var(--space-2xl);
+  }
+
+  .heroSection {
+    padding: var(--space-xl) var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .layout {
+    padding: 0 var(--space-sm);
+    gap: var(--space-lg);
+  }
+
+  .formSection {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+  }
+
+  .formGroup {
+    margin-bottom: var(--space-md);
+  }
+
+  .formGroup label {
+    font-size: 0.85rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+  }
+
+  .formGroup textarea {
+    min-height: 100px;
+  }
+
+  .submitBtn {
+    font-size: 0.95rem;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .infoCard {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .infoIcon {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .infoTitle {
+    font-size: 0.95rem;
+  }
+
+  .infoText {
+    font-size: 0.8rem;
+  }
+
+  .faqSection {
+    padding: 0 var(--space-sm);
+    margin-top: var(--space-xl);
+  }
+
+  .faqQuestion {
+    padding: var(--space-md);
+    font-size: 0.9rem;
+  }
+
+  .faqAnswer {
+    padding: 0 var(--space-md) var(--space-md);
+    font-size: 0.85rem;
+  }
+
+  .successEmoji {
+    font-size: 2.5rem;
+  }
+
+  .successTitle {
+    font-size: 1.2rem;
+  }
+}
+

@@ -1,0 +1,73 @@
+.trustSection {
+  margin-top: -10px; /* pull up over the scallop slightly if needed, or just let it sit below */
+  position: relative;
+  z-index: 25;
+  padding-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.badgeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.badgeCard {
+  border-radius: 15px;
+  padding: 25px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* very soft shadow */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.badgeCard:hover {
+  transform: translateY(-5px);
+}
+
+.pinkBadge {
+  background: #FF8A8A;
+}
+
+.orangeBadge {
+  background: #F38D33;
+}
+
+.grayBadge {
+  background: #A2A2A2;
+}
+
+.badgeIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.badgeContent h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.badgeContent p {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.95);
+}
+
+@media (max-width: 768px) {
+  .badgeGrid {
+    grid-template-columns: 1fr;
+  }
+}

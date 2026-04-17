@@ -1,0 +1,208 @@
+.mainContent {
+  flex: 1;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.sortSelect {
+  background: var(--color-bg-alt);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  color: #777;
+  outline: none;
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.fullCardLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 20px;
+  background: var(--color-bg-alt); /* Light grey */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 220px;
+}
+
+.imageBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.productImage {
+  object-fit: contain;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  z-index: 2;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.badgeNew {
+  background: var(--color-secondary);
+}
+
+.badgeSale {
+  background: var(--color-success);
+}
+
+.badgeHot {
+  background: var(--color-warning);
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(243, 141, 51, 0.95); /* var(--color-orange) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 5;
+}
+
+.imageWrapper:hover .overlay {
+  opacity: 1;
+}
+
+.overlayBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.overlayBtn:hover {
+  background: white;
+  color: var(--color-orange);
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.cardTitle {
+  margin: 0 0 5px 0;
+}
+
+.cardTitle a {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  text-decoration: none;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle a:hover {
+  color: var(--color-orange);
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.priceOriginal {
+  color: #aaa;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  color: #FFB199; /* soft orange/pink mix */
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

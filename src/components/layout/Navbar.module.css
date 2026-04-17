@@ -1,0 +1,279 @@
+.header {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+/* --- Top Bar --- */
+.topBar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-gray-light);
+  height: 48px;
+  font-family: var(--font-body);
+}
+
+.topBarContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-dark-light);
+}
+
+.topBarLeft, .topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 8px;
+}
+
+.socialIcons a {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  color: #777;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+
+.socialIcons a:hover {
+  background: var(--color-orange);
+  color: white;
+}
+
+.phoneContact {
+  letter-spacing: 0.5px;
+}
+
+.topBarLink {
+  text-decoration: none;
+  color: var(--color-dark-light);
+  transition: color 0.2s;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topBarLink:hover {
+  color: var(--color-orange);
+}
+
+.cartBtn {
+  background: none;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-dark-light);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.cartIconBadge {
+  position: relative;
+  display: inline-flex;
+  background: var(--color-orange);
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--color-dark);
+  color: white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Main Nav --- */
+.mainNav {
+  background: var(--color-brown);
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.navContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.desktopNav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: 1;
+}
+
+.navLinks:last-child {
+  justify-content: flex-end;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+
+.navLink:hover, .navLink.active {
+  color: var(--color-orange);
+}
+
+.logo {
+  text-decoration: none;
+  z-index: 10;
+  margin: 0 20px;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 10px 15px 5px;
+  border-radius: 0 0 40px 40px;
+  margin-top: -48px; /* Pulled up to overlap top bar */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logoWrapper:hover {
+  transform: translateY(5px);
+}
+
+.bearIcon {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-orange);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  letter-spacing: -0.5px;
+  margin-top: -5px;
+}
+
+/* --- Mobile Components --- */
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-bottom: 2px solid var(--color-gray-light);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.mobileMenu.open {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobileNavLink {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--color-gray-light);
+  text-transform: uppercase;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-orange);
+}
+
+@media (max-width: 992px) {
+  .navLinks {
+    display: none;
+  }
+  .menuBtn {
+    display: block;
+  }
+  .desktopNav {
+    justify-content: center;
+  }
+  .logoWrapper {
+    margin-top: -24px;
+    padding: 10px 15px;
+    border-radius: 0 0 25px 25px;
+  }
+  .bearIcon {
+    font-size: 2.5rem;
+  }
+  .logoText {
+    font-size: 1.4rem;
+  }
+  .topBarLeft, .topBarRight {
+    gap: 10px;
+  }
+  .socialIcons, .phoneContact {
+    display: none;
+  }
+  .topBarContainer {
+    justify-content: center;
+  }
+}
